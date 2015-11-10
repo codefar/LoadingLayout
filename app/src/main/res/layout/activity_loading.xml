@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.davy.loadinglayout.LoadingLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:emptyView="@layout/empty_view_custom">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="This is Content View" />
+        </RelativeLayout>
+    </com.davy.loadinglayout.LoadingLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <Button
+            android:id="@+id/btn_show_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading" />
+
+        <Button
+            android:id="@+id/btn_show_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empty" />
+
+        <Button
+            android:id="@+id/btn_show_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Error" />
+
+        <Button
+            android:id="@+id/btn_show_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Content" />
+    </LinearLayout>
+
+</LinearLayout>
